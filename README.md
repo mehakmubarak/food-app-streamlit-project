@@ -1,35 +1,35 @@
 
-# 🍱 FoodExpress – Streamlit-Based Food Delivery App
+# FoodExpress – Streamlit-Based Food Delivery App
 
 **FoodExpress** is a simple and interactive food delivery application built using **Python and Streamlit**. It includes user authentication, a dynamic menu, cart system, order tracking, and an admin panel for dish uploads.
-## 🚀 Features
+## Features
 
-### 🔐 User Authentication
+###  User Authentication
 - Users must sign up or log in to use the app.
 - Each user has a personalized experience and order history.
 
-### 🍽️ Menu (Main Dishes + Desserts)
+###  Menu (Main Dishes + Desserts)
 - Includes items like Chicken Biryani, Paneer Tikka, Zinger Burger, Chocolate Cake, and more.
 - Each dish displays an image and price.
 - Users can add items to their cart.
 
-### 🛒 Cart & Payment
+###  Cart & Payment
 - Cart automatically calculates the total amount.
 - Payment options include:
   - Cash on Delivery
   - JazzCash
   - Credit Card
 
-### 🧾 Order History
+###  Order History
 - Logged-in users can view their previous orders and receipts.
 
-### 🛎️ Order Tracking
+###  Order Tracking
 - Simulated real-time tracking with random statuses:
   - Preparing
   - On the Way
   - Delivered
 
-### 🔐 Admin Panel
+###  Admin Panel
 - Admin users can upload new dishes with name, price, and image URL.
 - Admin access is protected and limited to authorized users.
 
@@ -53,14 +53,14 @@ All session data is stored in memory (no database required for demo).
 Install dependencies:
 bash:pip install streamlit
 Run the app: uvx streamlit run app.py
-👤 Default Admin Account
+Default Admin Account
 Email: admin@gmail.com
 
 Password: admin123
 
 You can change or add more users in the session initialization section of the code.
 
-✨ Future Improvements
+ Future Improvements
  Add database support (Firebase, PostgreSQL, etc.)
 
  Quantity selector for items in the cart
