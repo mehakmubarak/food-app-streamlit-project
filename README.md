@@ -51,8 +51,10 @@ All session data is stored in memory (no database required for demo).
    git clone https://github.com/mehakmubarak/foodexpress.git
    cd foodexpress
 Install dependencies:
-bash:pip install streamlit
-Run the app: uvx streamlit run app.py
+bash:
+pip install streamlit
+Run the app:
+uvx streamlit run app.py
 Default Admin Account
 Email: admin@gmail.com
 
