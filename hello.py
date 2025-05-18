@@ -21,7 +21,7 @@ if 'cart' not in st.session_state:
 if 'orders' not in st.session_state:
     st.session_state.orders = []
 
-# Image
+# Image with urls
 if 'dishes' not in st.session_state:
     st.session_state.dishes = {
         "Main": {
@@ -104,7 +104,7 @@ if not st.session_state.authenticated:
     else:
         if st.button("Sign Up"):
             if signup(email, password):
-                st.success("✅ Account created and logged in!")
+                st.success(" Account created and logged in!")
                 st.session_state.authenticated = True
                 st.session_state.current_user = email
                 st.rerun()
@@ -113,13 +113,13 @@ if not st.session_state.authenticated:
 
 # ------ Main App Interface ---------
 else:
-    st.title(f"🍽️ Welcome, {st.session_state.current_user}!")
+    st.title(f" Welcome, {st.session_state.current_user}!")
 
     tab1, tab2, tab3, tab4 = st.tabs(["Menu", "🧾 My Orders", "Track Orders", "🔐 Admin Panel"])
 
     # --------- MENU TAB ---------
     with tab1:
-        st.subheader("📜 Main Dishes")
+        st.subheader(" Main Dishes")
         for name, info in st.session_state.dishes["Main"].items():
             col1, col2 = st.columns([1, 2])
             with col1:
@@ -143,7 +143,7 @@ else:
 
         #  Cart
         if st.session_state.cart:
-            st.subheader("🛒 Your Cart")
+            st.subheader(" Your Cart")
             for item in st.session_state.cart:
                 st.write(f"- {item['name']} — Rs {item['price']}")
             st.write(f"**Total:** Rs {get_cart_total()}")
@@ -158,13 +158,13 @@ else:
 
     # ---------------- ORDER HISTORY TAB ----------------
     with tab2:
-        st.subheader("🧾 Your Orders")
+        st.subheader(" Your Orders")
         user_orders = [o for o in st.session_state.orders if o["user"] == st.session_state.current_user]
         if not user_orders:
             st.info("You haven't placed any orders yet.")
         else:
             for o in reversed(user_orders):
-                st.markdown(f"#### 🕒 {o['time'].strftime('%Y-%m-%d %H:%M:%S')}")
+                st.markdown(f"####  {o['time'].strftime('%Y-%m-%d %H:%M:%S')}")
                 for item in o["items"]:
                     st.write(f"- {item['name']} — Rs {item['price']}")
                 st.write(f"**Total:** Rs {o['total']}")
